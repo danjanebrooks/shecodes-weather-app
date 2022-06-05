@@ -17,30 +17,42 @@
     ></script>
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="row">
-          <div class="col-6">
-          <form id="search-text-input">
-          <input
-            type="search"
-            placeholder="Type your city here..."
-            autofocus="on"
-            id="city-input"
-          />
+        <form id="search-text-input">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type your city here..."
+                autofocus="on"
+                id="city-input"
+              />
+            </div>
+            <div class="col-3">
+              <input type="submit" value="Go" class="btn btn-primary w-100" />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current city
+              </button>
+            </div>
           </div>
-          <div class="col-3">
-          <input type="submit" value="Go" class="btn btn-primary w-100" />
-          </div>
-          <div class="col-3"><button class="btn btn-success w-100" id="current-location-button">Current city</button></div>
-        </div>
-      </form>
+        </form>
         <header>
-          <h1><span id="currentCity"></span>, <span id="currentDate">Today</span></h1>
-          <p class="today"><span id="current-temperature"></span> <a href="#" id=celsius>°C</a> | <a href="#" id=fahrenheit>°F</a><div id=current-description>Description</div></p>
+          <h1>
+            <span id="currentCity"></span>, <span id="currentDate">Today</span>
+          </h1>
+          <p class="today">
+            <span id="current-temperature"></span>
+            <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a>
+          </p>
+          <div id="current-description">Description</div>
         </header>
         <br />
         <div class="row">
@@ -104,7 +116,12 @@
         </div>
       </div>
     </div>
-    <p><a href="https://github.com/danjanebrooks/shecodes-weather-app">Open-source code</a> by Danielle Brooks</p>
-    <script src=src/index.js></script>
+    <p>
+      <a href="https://github.com/danjanebrooks/shecodes-weather-app"
+        >Open-source code</a
+      >
+      by Danielle Brooks
+    </p>
+    <script src="src/index.js"></script>
   </body>
 </html>
